@@ -1,0 +1,41 @@
+<div class="card h-100 shadow-sm border-0">
+
+  <img
+    [src]="product.image"
+    class="card-img-top"
+    alt="{{ product.name }}"
+    style="height: 180px; object-fit: cover;">
+
+  <div class="card-body d-flex flex-column">
+
+    <h6 class="fw-semibold">{{ product.name }}</h6>
+
+    <p class="small text-muted mb-2">
+      {{ product.description }}
+    </p>
+
+    <strong class="text-primary mb-2">
+      {{ product.price }} €
+    </strong>
+
+    <div class="mb-3">
+      <span class="badge bg-dark me-1">
+        {{ product.category }}
+      </span>
+
+      <span
+        class="badge"
+        [class.bg-success]="product.active"
+        [class.bg-danger]="!product.active">
+        {{ product.active ? 'Activo' : 'Inactivo' }}
+      </span>
+    </div>
+
+    <button
+      class="btn btn-outline-danger btn-sm mt-auto"
+      (click)="eliminar()">
+      Eliminar
+    </button>
+
+  </div>
+</div>

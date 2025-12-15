@@ -1,0 +1,8 @@
+.card {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  transition: transform .2s ease;
+}

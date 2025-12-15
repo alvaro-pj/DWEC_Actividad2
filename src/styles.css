@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --color-primary: #1e3a8a;     /* azul petróleo */
+  --color-primary-soft: #dbeafe;
+
+  --color-success: #16a34a;     /* verde suave */
+  --color-danger: #dc2626;      /* rojo apagado */
+
+  --color-bg: #f8fafc;          /* gris claro */
+  --color-card: #ffffff;
+  --color-text-muted: #6b7280;
+}
+
+/* Fondo general */
+body {
+  background-color: var(--color-bg);
+}
+
+/* Sobrescribimos Bootstrap */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.bg-success {
+  background-color: var(--color-success) !important;
+}
+
+.bg-danger {
+  background-color: var(--color-danger) !important;
+}
+
+.card {
+  background-color: var(--color-card);
+}

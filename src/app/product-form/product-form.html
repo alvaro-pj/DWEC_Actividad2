@@ -1,0 +1,68 @@
+<div class="card shadow-sm border-0 mb-4">
+  <div class="card-body">
+
+    <h5 class="fw-semibold mb-3 text-primary">
+      Añadir producto
+    </h5>
+
+    <form [formGroup]="formulario" (ngSubmit)="enviar()">
+
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="name">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Descripción</label>
+        <textarea
+          class="form-control"
+          rows="2"
+          formControlName="description" 
+          style="resize: none;"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Precio</label>
+        <input
+          type="number"
+          class="form-control"
+          formControlName="price">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Categoría</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="category">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">URL Imagen</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="image">
+      </div>
+
+      <div class="form-check mb-3">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="activoCheck"
+          formControlName="active">
+        <label class="form-check-label" for="activoCheck">
+          Activo
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary w-100 mt-2">
+        Crear producto
+      </button>
+
+    </form>
+
+  </div>
+</div>
